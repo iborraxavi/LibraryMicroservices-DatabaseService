@@ -21,6 +21,12 @@ public class BookRestController {
 	@Autowired
 	private BookService bookService;
 	
+	@GetMapping("/")
+	@ResponseBody
+	public String borrarMetodo() {
+		return "Hola";
+	}
+	
 	@PostMapping(BookPathConstants.BOOK_SERVICE_SAVE)
 	@ResponseBody
 	public Book createBook(@RequestBody Book book) {
