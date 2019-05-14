@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.certiorem.librarymicroservicesproject.constants.OrderPathConstants;
 import com.certiorem.librarymicroservicesproject.domain.orderbook.Order;
 import com.certiorem.librarymicroservicesproject.service.OrderService;
 
@@ -18,37 +19,31 @@ public class OrderRestController {
 	@Autowired
 	private OrderService orderService;
 	
-	@PostMapping("/create-order")
+	@PostMapping(OrderPathConstants.ORDER_SERVICE_SAVE)
 	@ResponseBody
-	public Order createOrder(@RequestParam Order order) {
+	public Order saveOrder(@RequestParam Order order) {
 		return orderService.createUpdateOrder(order);
 	}
 	
-	@GetMapping("/read-order")
+	@GetMapping(OrderPathConstants.ORDER_SERVICE_READ)
 	@ResponseBody
 	public Order getOrderById(@RequestParam String id) {
 		return orderService.getOrder(Integer.parseInt(id));
 	}
 	
-	@PostMapping("/update-order")
-	@ResponseBody
-	public Order updateOrder(@RequestParam Order order) {
-		return orderService.createUpdateOrder(order);
-	}
-	
-	@GetMapping("/delete-order")
+	@GetMapping(OrderPathConstants.ORDER_SERVICE_DELETE)
 	@ResponseBody
 	public void deleteOrders(@RequestParam String id) {
 		orderService.deleteOrder(Integer.parseInt(id));
 	}
 	
-	@GetMapping("/all-orders")
+	@GetMapping(OrderPathConstants.ORDER_SERVICE_GET_ALL)
 	@ResponseBody
 	public List<Order> getAllOrders() {
 		return orderService.getAllOrders();
 	}
 	
-	@GetMapping("/orders-by-client")
+	@GetMapping(OrderPathConstants.ORDER_SERVICE_GET_BY_CLIENT)
 	@ResponseBody
 	public List<Order> getOrdersByClient(@RequestParam String clientId) {
 		return orderService.getOrdersByClientId(Integer.parseInt(clientId));

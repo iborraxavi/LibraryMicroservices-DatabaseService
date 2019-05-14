@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages = "com.certiorem.librarymicroservicesproject")
 @EnableJpaRepositories(basePackages = "com.certiorem.librarymicroservicesproject")
-@EntityScan(basePackages = { "com.certiorem.librarymicroservicesproject.model" })
+@EntityScan(basePackages = { "com.certiorem.librarymicroservicesproject.domain" })
 public class DatabaseServiceApplication {
 
 	public static void main(String[] args) {
