@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.certiorem.librarymicroservicesproject.model.purchasebook.Purchase;
-import com.certiorem.librarymicroservicesproject.modelservice.PurchaseService;
+import com.certiorem.librarymicroservicesproject.domain.purchasebook.Purchase;
+import com.certiorem.librarymicroservicesproject.service.PurchaseService;
 
 @RestController
 public class PurchaseRestController {

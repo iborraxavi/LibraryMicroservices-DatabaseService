@@ -1,4 +1,4 @@
-package com.certiorem.librarymicroservicesproject.model.bookmodel;
+package com.certiorem.librarymicroservicesproject.domain.purchasebook;
 
 import java.io.Serializable;
 import java.util.List;
@@ -17,25 +17,28 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 @Entity
-@Table(name = "BookGenre")
+@Table(name = "Provider")
 @Data
-public class BookGenre implements Serializable {
+public class Provider implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID")
 	private Integer id;
-	
+
 	@Column(name = "NAME", nullable = false)
 	private String name;
-	
-	@Column(name = "DESCRIPTION")
-	private String description;
-	
+
+	@Column(name = "CIF", nullable = false)
+	private String cif;
+
+	@Column(name = "LOCATION")
+	private String location;
+
 	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy="bookGenre")
-	private List<Book> books;
-	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "provider")
+	private List<Purchase> purchases;
+
 }

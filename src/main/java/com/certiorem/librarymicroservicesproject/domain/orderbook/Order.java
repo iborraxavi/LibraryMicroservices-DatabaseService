@@ -1,4 +1,4 @@
-package com.certiorem.librarymicroservicesproject.model.orderbook;
+package com.certiorem.librarymicroservicesproject.domain.orderbook;
 
 import java.io.Serializable;
 import java.util.List;
@@ -14,7 +14,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.certiorem.librarymicroservicesproject.model.bookmodel.Book;
+import com.certiorem.librarymicroservicesproject.domain.bookmodel.Book;
 
 import lombok.Data;
 

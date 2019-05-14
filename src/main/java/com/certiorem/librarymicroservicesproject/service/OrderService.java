@@ -1,8 +1,8 @@
-package com.certiorem.librarymicroservicesproject.modelservice;
+package com.certiorem.librarymicroservicesproject.service;
 
 import java.util.List;
 
-import com.certiorem.librarymicroservicesproject.model.orderbook.Order;
+import com.certiorem.librarymicroservicesproject.domain.orderbook.Order;
 
 public interface OrderService {
 

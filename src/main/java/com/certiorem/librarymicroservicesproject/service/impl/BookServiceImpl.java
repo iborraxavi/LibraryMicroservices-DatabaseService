@@ -1,4 +1,4 @@
-package com.certiorem.librarymicroservicesproject.modelservice.impl;
+package com.certiorem.librarymicroservicesproject.service.impl;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.certiorem.librarymicroservicesproject.model.bookmodel.Book;
-import com.certiorem.librarymicroservicesproject.modelservice.BookService;
+import com.certiorem.librarymicroservicesproject.domain.bookmodel.Book;
 import com.certiorem.librarymicroservicesproject.repository.BookRepository;
+import com.certiorem.librarymicroservicesproject.service.BookService;
 
 @Service
 public class BookServiceImpl implements BookService {

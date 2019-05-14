@@ -1,4 +1,4 @@
-package com.certiorem.librarymicroservicesproject.model.purchasebook;
+package com.certiorem.librarymicroservicesproject.domain.purchasebook;
 
 import java.io.Serializable;
 import java.util.List;
@@ -16,7 +16,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.certiorem.librarymicroservicesproject.model.bookmodel.Book;
+import com.certiorem.librarymicroservicesproject.domain.bookmodel.Book;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;

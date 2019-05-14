@@ -1,8 +1,8 @@
-package com.certiorem.librarymicroservicesproject.modelservice;
+package com.certiorem.librarymicroservicesproject.service;
 
 import java.util.List;
 
-import com.certiorem.librarymicroservicesproject.model.bookmodel.Book;
+import com.certiorem.librarymicroservicesproject.domain.bookmodel.Book;
 
 public interface BookService {
 	

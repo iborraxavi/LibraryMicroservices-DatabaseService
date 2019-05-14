@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.certiorem.librarymicroservicesproject.model.orderbook.Order;
-import com.certiorem.librarymicroservicesproject.modelservice.OrderService;
+import com.certiorem.librarymicroservicesproject.domain.orderbook.Order;
+import com.certiorem.librarymicroservicesproject.service.OrderService;
 
 @RestController
 public class OrderRestController {

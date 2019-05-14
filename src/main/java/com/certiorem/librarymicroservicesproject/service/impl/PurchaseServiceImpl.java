@@ -1,13 +1,13 @@
-package com.certiorem.librarymicroservicesproject.modelservice.impl;
+package com.certiorem.librarymicroservicesproject.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.certiorem.librarymicroservicesproject.model.purchasebook.Purchase;
-import com.certiorem.librarymicroservicesproject.modelservice.PurchaseService;
+import com.certiorem.librarymicroservicesproject.domain.purchasebook.Purchase;
 import com.certiorem.librarymicroservicesproject.repository.PurchaseRepository;
+import com.certiorem.librarymicroservicesproject.service.PurchaseService;
 
 @Service
 public class PurchaseServiceImpl implements PurchaseService {

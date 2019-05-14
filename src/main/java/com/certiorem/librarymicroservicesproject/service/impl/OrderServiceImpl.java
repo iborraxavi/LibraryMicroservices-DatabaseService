@@ -1,13 +1,13 @@
-package com.certiorem.librarymicroservicesproject.modelservice.impl;
+package com.certiorem.librarymicroservicesproject.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.certiorem.librarymicroservicesproject.model.orderbook.Order;
-import com.certiorem.librarymicroservicesproject.modelservice.OrderService;
+import com.certiorem.librarymicroservicesproject.domain.orderbook.Order;
 import com.certiorem.librarymicroservicesproject.repository.OrderRepository;
+import com.certiorem.librarymicroservicesproject.service.OrderService;
 
 @Service
 public class OrderServiceImpl implements OrderService {

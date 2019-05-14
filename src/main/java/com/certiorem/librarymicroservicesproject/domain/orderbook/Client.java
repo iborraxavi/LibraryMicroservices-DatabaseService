@@ -1,4 +1,4 @@
-package com.certiorem.librarymicroservicesproject.model.orderbook;
+package com.certiorem.librarymicroservicesproject.domain.orderbook;
 
 import java.io.Serializable;
 import java.util.List;

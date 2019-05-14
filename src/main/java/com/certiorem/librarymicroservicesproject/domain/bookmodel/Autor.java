@@ -1,4 +1,4 @@
-package com.certiorem.librarymicroservicesproject.model.bookmodel;
+package com.certiorem.librarymicroservicesproject.domain.bookmodel;
 
 import java.io.Serializable;
 import java.util.List;

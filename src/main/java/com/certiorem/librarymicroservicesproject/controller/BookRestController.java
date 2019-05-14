@@ -12,20 +12,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.certiorem.librarymicroservicesproject.constants.BookPathConstants;
-import com.certiorem.librarymicroservicesproject.model.bookmodel.Book;
-import com.certiorem.librarymicroservicesproject.modelservice.BookService;
+import com.certiorem.librarymicroservicesproject.domain.bookmodel.Book;
+import com.certiorem.librarymicroservicesproject.service.BookService;
 
 @RestController
 public class BookRestController {
 
 	@Autowired
 	private BookService bookService;
-	
-	@GetMapping("/")
-	@ResponseBody
-	public String borrarMetodo() {
-		return "Hola";
-	}
 	
 	@PostMapping(BookPathConstants.BOOK_SERVICE_SAVE)
 	@ResponseBody
