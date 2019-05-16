@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.certiorem.librarymicroservicesproject.constants.PurchasePathConstants;
 import com.certiorem.librarymicroservicesproject.domain.purchasebook.Purchase;
 import com.certiorem.librarymicroservicesproject.service.PurchaseService;
 
@@ -18,37 +19,31 @@ public class PurchaseRestController {
 	@Autowired
 	private PurchaseService purchaseService;
 	
-	@PostMapping("/create-purchase")
+	@PostMapping(PurchasePathConstants.PURCHASE_SERVICE_SAVE)
 	@ResponseBody
 	public Purchase createPurchase(@RequestParam Purchase purchase) {
 		return purchaseService.createUpdatePurchase(purchase);
 	}
 	
-	@GetMapping("/read-purchase")
+	@GetMapping(PurchasePathConstants.PURCHASE_SERVICE_READ)
 	@ResponseBody
 	public Purchase getPurchaseById(@RequestParam String id) {
 		return purchaseService.getPurchase(Integer.parseInt(id));
 	}
 	
-	@PostMapping("/update-purchase")
-	@ResponseBody
-	public Purchase updatePurchase(@RequestParam Purchase purchase) {
-		return purchaseService.createUpdatePurchase(purchase);
-	}
-	
-	@GetMapping("/delete-purchase")
+	@GetMapping(PurchasePathConstants.PURCHASE_SERVICE_DELETE)
 	@ResponseBody
 	public void deletePurchase(@RequestParam String id) {
 		purchaseService.deletePurchase(Integer.parseInt(id));
 	}
 	
-	@GetMapping("/all-purchases")
+	@GetMapping(PurchasePathConstants.PURCHASE_SERVICE_GET_ALL)
 	@ResponseBody
 	public List<Purchase> getAllPurchases() {
 		return purchaseService.getAllPurchases();
 	}
 	
-	@GetMapping("/purchases-by-provider")
+	@GetMapping(PurchasePathConstants.PURCHASE_SERVICE_GET_BY_PROVIDER)
 	@ResponseBody
 	public List<Purchase> getPurchasesByProvider(@RequestParam String providerId) {
 		return purchaseService.getPurchasesByProviderId(Integer.parseInt(providerId));
